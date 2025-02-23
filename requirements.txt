@@ -1,0 +1,7 @@
+pandasai
+streamlit
+openai
+openpyxl
+xlsxwriter
+pydantic
+simplejson
