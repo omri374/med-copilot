@@ -14,9 +14,11 @@ from llm_calls import validate_llm_response
 # Load environment variables
 load_dotenv()
 
-SYSTEM_PROMPT = """
+CONDITION_NAME = "Retinitis Pigmentosa (RP)"
+
+SYSTEM_PROMPT = f"""
 You are a medical assistant specialized in modifying structured medical data.
-You will receive JSON input representing a dataset of medications for Retinitis Pigmentosa (RP).
+You will receive JSON input representing a dataset of medications for {CONDITION_NAME}.
 
 Your task is to:
 - Answer user requests about the provided medication data
@@ -24,13 +26,15 @@ Your task is to:
 - Provide references, explanations and additional remarks
 Always return only a JSON object with:
 - "dataset": updated dataset
-- "explanation": explanation of changes and additional information related to the findings. Specify the change made for each medication
-- "references": References for findings, i.e. links to scientific papers or websites. Specify which reference relates to which finding on each medication.
+- "explanation": explanation of changes and additional information related to the findings. 
+Specify the change made for each medication
+- "references": References for findings, i.e. links to scientific papers or websites. 
+Specify which reference relates to which finding on each medication.
 
 Additional guidelines:
 1. Please respond in valid JSON format only.
 2. Make sure the JSON is valid, e.g. has no unterminated strings or missing commas.
-3. Ensure the response starts with `{` and ends with `}` without any trailing text.
+3. Ensure the response starts with `{{` and ends with `}}` without any trailing text.
 """
 
 

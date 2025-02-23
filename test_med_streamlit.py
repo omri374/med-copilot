@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 from openai import OpenAI
 
 import llm_calls
-from rp_streamlit import SYSTEM_PROMPT
+from med_streamlit import SYSTEM_PROMPT
 
 
 
