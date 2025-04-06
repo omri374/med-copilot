@@ -1,7 +1,9 @@
-pandasai
-streamlit
+pandas
+gradio
 openai
 openpyxl
 xlsxwriter
 pydantic
 simplejson
+python-dotenv
+requests

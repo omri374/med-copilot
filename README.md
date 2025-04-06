@@ -1,3 +1,11 @@
+---
+title: Medication Research CoPilot
+sdk: gradio
+sdk_version: 5.20.1
+app_file: medication_copilot.py
+pinned: false
+---
+
 # Medication research CoPilot
 
 ## Introduction
@@ -16,7 +24,7 @@ pip install -r requirements.txt
 ## Running the application
 To run the application, run the following command:
 ```bash
-streamlit run med_streamlit.py
+python medication_copilot.py
 ```
 
 ### Using the application
@@ -28,6 +36,6 @@ streamlit run med_streamlit.py
 6. Download the updated dataset by clicking on the "Download" button.
 
 ## Prompt
-Note that the default system prompt can be found [here](med_streamlit.py). 
+Note that the default system prompt can be found [here](medication_copilot.py). 
 Consider modifying the prompt to better suit your needs, for example for a specific disease or condition.
 
